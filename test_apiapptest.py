@@ -6,7 +6,7 @@ class SimpleTest(unittest.TestCase):
     
     def test_testcase1(self):         
         # a dummy testcase
-        self.assertTrue(True) 
+        self.assertTrue(False) 
    
     def test_testcase2(self):
         # testcase to show if we are getting data
