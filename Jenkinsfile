@@ -39,5 +39,12 @@ pipeline {
       }
     }
 
+    stage('run test') {
+      steps {
+        sh 'python3 -m pytest .'
+        readFile 'status.txt'
+      }
+    }
+
   }
 }
