@@ -31,5 +31,13 @@ pipeline {
       }
     }
 
+    stage('build pyc') {
+      steps {
+        sh 'python3 -m py_compile apicall.py'
+        fileExists '__pycache__/apicall.cpython-310.pyc'
+        writeFile(file: 'status.txt', text: 'On Stage3')
+      }
+    }
+
   }
 }
