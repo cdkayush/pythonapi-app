@@ -55,6 +55,7 @@ pipeline {
     stage('docker push') {
       steps {
         sh 'docker login -u $DKUSRNAME -p $DKPASSWD'
+        sh 'docker push image:tag'
       }
     }
 
