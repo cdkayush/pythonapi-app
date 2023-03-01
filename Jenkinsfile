@@ -46,5 +46,11 @@ pipeline {
       }
     }
 
+    stage('build docker img') {
+      steps {
+        sh 'sudo docker build -t myapp:v1 .'
+      }
+    }
+
   }
 }
