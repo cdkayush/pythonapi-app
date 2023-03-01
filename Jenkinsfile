@@ -52,5 +52,15 @@ pipeline {
       }
     }
 
+    stage('docker push') {
+      steps {
+        sh 'docker login -u $DKUSRNAME -p $DKPASSWD'
+      }
+    }
+
+  }
+  environment {
+    DKUSRNAME = 'ayushl33t'
+    DKPASSWD = ''
   }
 }
